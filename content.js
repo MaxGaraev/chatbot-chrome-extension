@@ -1,6 +1,6 @@
 const storage = chrome.storage.sync;
-chrome.storage.sync.get(['chatbotUrl'], function(result) {
-  window.difyChatbotConfig = { 
+chrome.storage.sync.get(['chatbotUrl'], function (result) {
+  window.difyChatbotConfig = {
     chatbotUrl: result.chatbotUrl,
   };
 });
@@ -10,7 +10,7 @@ document.body.onload = embedChatbot;
 async function embedChatbot() {
   const difyChatbotConfig = window.difyChatbotConfig;
   if (!difyChatbotConfig) {
-    console.warn('Dify Chatbot Url is empty or is not provided');
+    console.warn('URL чата не может быть пустым или не предоставлен');
     return;
   }
   const openIcon = `<svg

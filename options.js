@@ -5,14 +5,14 @@ document.getElementById('save-button').addEventListener('click', function (e) {
   const errorTip = document.getElementById('error-tip');
 
   if (chatbotUrl.trim() === "") {
-      errorTip.textContent = "Dify ChatBot URL cannot be empty.";
+    errorTip.textContent = "URL чата не может быть пустым.";
   } else {
     errorTip.textContent = "";
 
     chrome.storage.sync.set({
       'chatbotUrl': chatbotUrl,
     }, function () {
-      alert('Save Success!');
+      alert('Успешно сохранено!');
     });
   }
 });
