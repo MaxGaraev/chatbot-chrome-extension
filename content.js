@@ -10,7 +10,7 @@ document.body.onload = embedChatbot;
 async function embedChatbot() {
   const difyChatbotConfig = window.difyChatbotConfig;
   if (!difyChatbotConfig) {
-    console.warn('URL чата не может быть пустым или не предоставлен');
+    console.warn('Chatbot Url is empty or is not provided');
     return;
   }
   const openIcon = `<svg
